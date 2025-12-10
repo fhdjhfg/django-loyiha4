@@ -1,0 +1,125 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Bosh sahifa</title>
+  <meta name="description" content="Soddalashtirilgan blog index sahifasi" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --maxw:1100px; --gap:20px; --fw:400; --ff: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; font-family:var(--ff); background:linear-gradient(180deg,#071021 0%, #071730 60%); color:#e6eef6}
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--maxw); margin:36px auto; padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between; gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;background:var(--glass);border-radius:10px;display:grid;place-items:center;font-weight:700;color:var(--accent)}
+    nav a{margin-left:16px;color:var(--muted);font-weight:600}
+    .hero{margin-top:28px;display:grid;grid-template-columns:1fr 320px;gap:var(--gap)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .search{display:flex;gap:10px;margin-bottom:16px}
+    .search input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:18px}
+    .post{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+    .post img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .post h3{margin:10px 0 6px;font-size:16px}
+    .meta{font-size:13px;color:var(--muted)}
+    .sidebar .widget{margin-bottom:12px}
+    footer{margin-top:36px;padding:20px 0;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (max-width:920px){.hero{grid-template-columns:1fr} .grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.grid{grid-template-columns:1fr} nav a{display:none} header{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">B</div>
+        <div>
+          <div style="font-weight:700">Blog</div>
+          <div style="font-size:12px;color:var(--muted)">Yangiliklar va maqolalar</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Bosh sahifa</a>
+        <a href="#">Kategoriya</a>
+        <a href="#">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1 style="margin:0 0 8px">Eng so'nggi maqolalar</h1>
+        <p style="color:var(--muted);margin:0 0 16px">Qiziqarli maqolalar va yangiliklarni kuzatib boring.</p>
+
+        <div class="search">
+          <input placeholder="Maqola yoki kalit so'zni qidiring" />
+          <button style="padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:white;font-weight:600">Qidirish</button>
+        </div>
+
+        <div class="grid">
+          <!-- Card 1 -->
+          <article class="post">
+            <img src="https://picsum.photos/seed/1/600/400" alt="post image"/>
+            <h3>HTML va CSS bilan dizayn qilish</h3>
+            <div class="meta">12 Dekabr, 2025 • Dasturlash</div>
+            <p style="color:var(--muted);font-size:14px;margin-top:8px">Qisqacha kirish: web sahifa dizaynining asosiy qoidalari...</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="post">
+            <img src="https://picsum.photos/seed/2/600/400" alt="post image"/>
+            <h3>JavaScript bilan interaktivlik</h3>
+            <div class="meta">5 Dekabr, 2025 • Dasturlash</div>
+            <p style="color:var(--muted);font-size:14px;margin-top:8px">DOM manipulyatsiyasi va sodda misollar...</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="post">
+            <img src="https://picsum.photos/seed/3/600/400" alt="post image"/>
+            <h3>Responsive dizayn qoidalari</h3>
+            <div class="meta">1 Dekabr, 2025 • Dizayn</div>
+            <p style="color:var(--muted);font-size:14px;margin-top:8px">Mobil uchun optimizatsiya qilish bo'yicha tavsiyalar...</p>
+          </article>
+        </div>
+
+      </div>
+
+      <aside class="sidebar" style="width:320px">
+        <div class="card">
+          <div class="widget">
+            <h4 style="margin:0 0 6px">Ommabop</h4>
+            <div style="color:var(--muted)">Maqola 1<br/>Maqola 2<br/>Maqola 3</div>
+          </div>
+
+          <div class="widget">
+            <h4 style="margin:0 0 6px">Kategoriyalar</h4>
+            <div style="color:var(--muted)">Dizayn<br/>Dasturlash<br/>Texnologiya</div>
+          </div>
+
+          <div class="widget">
+            <h4 style="margin:0 0 6px">Yozuvchi</h4>
+            <div style="display:flex;gap:10px;align-items:center">
+              <div style="width:44px;height:44px;border-radius:8px;background:var(--glass)"></div>
+              <div>
+                <div style="font-weight:700">Jahon</div>
+                <div style="color:var(--muted);font-size:13px">Web ishlab chiquvchi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      © 2025 Blog. Barcha huquqlar himoyalangan.
+    </footer>
+  </div>
+</body>
+</html>
